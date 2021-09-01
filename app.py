@@ -95,7 +95,7 @@ def main():
                                             option_g, option_h
                                         ]
 
-            # Instanciate a list of product choosent by the user
+            # Instanciate a list of product choosen by the user
             final_products = []
             counter = 0
             for option in known_variables:
@@ -105,10 +105,11 @@ def main():
                 else:
                     counter += 1
 
-            # Inform the user that he can choose the products he/she wants to cook
-            # Each time the user clic on a checkbox, the full script is re-run
+            # Inform the user that he/she can choose the products he/she wants to cook
+            # Each time the user clic on a checkbox, the full script is rerun
             # considering this new information
             st.write("If you have preferences, please select the products you would like to cook.")
+
             # Tune the text (center, bold, raise text size and change color to green)
             st.markdown("<center><b><span style='font-size: 180%; color: green'>Top 3 recipes Marmiton from all of these products.</span></b></center>",
                 unsafe_allow_html=True)

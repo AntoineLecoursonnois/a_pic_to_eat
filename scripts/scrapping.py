@@ -7,15 +7,14 @@ def build_soup(input):
     '''
     Return a soup from a list of ingredients found out by our model.
     '''
-
-    # Is the input a list of strings
+    # Check that the input is a list of strings
     try:
         assert isinstance(input, list)
         assert all(list(map(lambda string: isinstance(string, str),
                             input)))
     except AssertionError:
         print('-------------------------------------------------------', '\n',
-              'Be aware that i only eat a single list of strings !', '\n',
+              'Be aware that I only eat a single list of strings !', '\n',
               '-------------------------------------------------------')
 
     # Create a finding text for each ingredient
@@ -43,7 +42,7 @@ def parse_recipes(soup):
     star_recipe = []
     review_nbr = []
 
-    # Scrap all recipes items from first page
+    # Scrap all recipes items from the first page
     # If the url given does not work anymore, just rough scrap a recipe of crepes
     for card in soup.find_all(
             'a',
@@ -71,7 +70,8 @@ def parse_recipes(soup):
                 'https://assets.afcdn.com/recipe/20170404/63020_w768h583c1cx2217cy1478.webp'
             )
 
-        # Recipe global score :  0-5 (float)
+        # Recipe global score : 0-5 (float)
+        # If there is no review, set the global score to 1
         try:
             star_recipe.append(float(card.find('span').text.replace('/5', '')))
         except:
@@ -89,7 +89,7 @@ def parse_recipes(soup):
         except:
             review_nbr.append(1)
 
-    # Generate the DataFrame and fill in the columns with the informations just scrapped
+    # Generate a DataFrame and fill in the columns with the informations just scrapped
     recipe_df = pd.DataFrame({
         'url_recipe': url_recipe,
         'title': title,
@@ -105,13 +105,12 @@ def parse_recipes(soup):
     # Sort the recipes by this new score in a descending way
     recipe_df = recipe_df.sort_values(by=['score_review'], ascending=False)
 
-    # Delete the recipes with a blurred image
+    # Retrieve the recipes with a blurred image
     recipe_df = recipe_df[~recipe_df['img_url'].str.contains("blurred")]
 
     # Set a new index to the dataframe
     recipe_df = recipe_df.reset_index(drop=True)
 
-    # Return the clean dataframe sorted by our computed score
     return recipe_df
 
 
