@@ -7,7 +7,7 @@ Reduce food waste with a single picture of your fridge.
 
 We have noticed that we are getting "greener" to reduce our environmental impact and control the quality of what we eat.
 
-This way, we often find ourselves with various fruits and vegetables rotting at the bottom of our fridge becausse of a lack of cooking knowledge.
+This way, we often find ourselves with various fruits and vegetables rotting at the bottom of our fridge because of a lack of cooking knowledge.
 
 Artificial intelligence can help us fight this situation, but how?
 
