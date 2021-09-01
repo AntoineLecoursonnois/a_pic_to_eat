@@ -12,18 +12,22 @@ Artificial intelligence can help us fight this situation, but how?
 The process imagined and deployed on heroku is as follows :
 - Take a picture of your fridge
 - Load it on our app
-- The IA will:  - Crop it in patches
-                - Detect all the fruits and vegetables present
-                - Live scrap Marmiton.org (a famous french cooking recipes website) in order to find all the recipes that contains the detected products
-                - Suggest you a top 3 of the best recipes regarding the reviews
+- The IA will:
+
+Crop it in patches.
+Detect all the fruits and vegetables present.
+Live scrap Marmiton.org (a famous french cooking recipes website) in order to find all the recipes that contains the detected products.
+Suggest you a top 3 of the best recipes regarding the reviews.
 
 - You now have the keys to act against food waste, bon appétit.
+
 
 => Why :
 
 This project was carried out during the last two weeks of the developer training in artificial intelligence provided by Le Wagon.
 The aim of this exercise was to use some of the techniques acquired during this program.
 Aware of the environmental issues, we wanted to help reduce food waste.
+
 
 => Who :
 
@@ -32,6 +36,7 @@ Arnaud Taillard
 Jérémy Hidalgo
 
 Antoine Lecoursonnois
+
 
 => How :
 
@@ -42,6 +47,7 @@ The techniques used are:
 - Transfer learning (VGG16) to optimize our results (Precision score : 95.9%).
 - Live scrapping of the Marmiton website from the detected products.
 - Production on heroku.
+
 
 => See the presentation :
 
