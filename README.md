@@ -1,74 +1,40 @@
-# Data analysis
-- Document here the project: a_pic_to_eat_heroku
-- Description: Project Description
-- Data Source:
-- Type of analysis:
+A Pic To Eat
 
-Please document the project the better you can.
+Reduce food waste with a single picture of your fridge.
 
-# Startup the project
+=> What :
+We have noticed that we are getting "greener" to reduce our environmental impact and control the quality of what we eat.
+This way, we often find ourselves with various fruits and vegetables rotting at the bottom of our fridge becausse of a lack of cooking knowledge.
 
-The initial setup.
+Artificial intelligence can help us fight this situation, but how?
 
-Create virtualenv and install the project:
-```bash
-sudo apt-get install virtualenv python-pip python-dev
-deactivate; virtualenv ~/venv ; source ~/venv/bin/activate ;\
-    pip install pip -U; pip install -r requirements.txt
-```
+The process imagined and deployed on heroku is as follows :
+- Take a picture of your fridge
+- Load it on our app
+- The IA will:  - Crop it in patches
+                - Detect all the fruits and vegetables present
+                - Live scrap Marmiton.org (a famous french cooking recipes website) in order to find all the recipes that contains the detected products
+                - Suggest you a top 3 of the best recipes regarding the reviews
 
-Unittest test:
-```bash
-make clean install test
-```
+- You now have the keys to act against food waste, bon appétit.
 
-Check for a_pic_to_eat_heroku in gitlab.com/{group}.
-If your project is not set please add it:
+=> Why :
+This project was carried out during the last two weeks of the developer training in artificial intelligence provided by Le Wagon.
+The aim of this exercise was to use some of the techniques acquired during this program.
+Aware of the environmental issues, we wanted to help reduce food waste.
 
-- Create a new project on `gitlab.com/{group}/a_pic_to_eat_heroku`
-- Then populate it:
+=> Who :
+Arnaud Taillard
+Jérémy Hidalgo
+Antoine Lecoursonnois
 
-```bash
-##   e.g. if group is "{group}" and project_name is "a_pic_to_eat_heroku"
-git remote add origin git@github.com:{group}/a_pic_to_eat_heroku.git
-git push -u origin master
-git push -u origin --tags
-```
+=> How :
+The techniques used are:
+- Cropping.
+- Deep learning model (CNN) to detect 15 fruits and vegetables.
+- Transfer learning (VGG16) to optimize our results (Precision score : 95.9%).
+- Live scrapping of the Marmiton website from the detected products.
+- Production on heroku.
 
-Functionnal test with a script:
-
-```bash
-cd
-mkdir tmp
-cd tmp
-a_pic_to_eat_heroku-run
-```
-
-# Install
-
-Go to `https://github.com/{group}/a_pic_to_eat_heroku` to see the project, manage issues,
-setup you ssh public key, ...
-
-Create a python3 virtualenv and activate it:
-
-```bash
-sudo apt-get install virtualenv python-pip python-dev
-deactivate; virtualenv -ppython3 ~/venv ; source ~/venv/bin/activate
-```
-
-Clone the project and install it:
-
-```bash
-git clone git@github.com:{group}/a_pic_to_eat_heroku.git
-cd a_pic_to_eat_heroku
-pip install -r requirements.txt
-make clean install test                # install and test
-```
-Functionnal test with a script:
-
-```bash
-cd
-mkdir tmp
-cd tmp
-a_pic_to_eat_heroku-run
-```
+=> See the presentation :
+If you are interested to see our presentation, a video will be available in September 2021 on the Youtube account Le Wagon Nantes - batch data 667 (2nd group).
