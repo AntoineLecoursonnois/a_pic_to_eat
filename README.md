@@ -3,6 +3,7 @@ A Pic To Eat
 Reduce food waste with a single picture of your fridge.
 
 => What :
+
 We have noticed that we are getting "greener" to reduce our environmental impact and control the quality of what we eat.
 This way, we often find ourselves with various fruits and vegetables rotting at the bottom of our fridge becausse of a lack of cooking knowledge.
 
@@ -19,17 +20,23 @@ The process imagined and deployed on heroku is as follows :
 - You now have the keys to act against food waste, bon appétit.
 
 => Why :
+
 This project was carried out during the last two weeks of the developer training in artificial intelligence provided by Le Wagon.
 The aim of this exercise was to use some of the techniques acquired during this program.
 Aware of the environmental issues, we wanted to help reduce food waste.
 
 => Who :
+
 Arnaud Taillard
+
 Jérémy Hidalgo
+
 Antoine Lecoursonnois
 
 => How :
+
 The techniques used are:
+
 - Cropping.
 - Deep learning model (CNN) to detect 15 fruits and vegetables.
 - Transfer learning (VGG16) to optimize our results (Precision score : 95.9%).
@@ -37,4 +44,5 @@ The techniques used are:
 - Production on heroku.
 
 => See the presentation :
+
 If you are interested to see our presentation, a video will be available in September 2021 on the Youtube account Le Wagon Nantes - batch data 667 (2nd group).
