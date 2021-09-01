@@ -5,10 +5,10 @@ install_requirements:
 	@pip install -r requirements.txt
 
 check_code:
-	@flake8 scripts/* a_pic_to_eat/*.py
+	@flake8 scripts/* a_pic_to_eat_heroku/*.py
 
 black:
-	@black scripts/* a_pic_to_eat/*.py
+	@black scripts/* a_pic_to_eat_heroku/*.py
 
 test:
 	@coverage run -m pytest tests/*.py
@@ -22,8 +22,8 @@ clean:
 	@rm -f .coverage
 	@rm -fr */__pycache__ */*.pyc __pycache__
 	@rm -fr build dist
-	@rm -fr a_pic_to_eat-*.dist-info
-	@rm -fr a_pic_to_eat.egg-info
+	@rm -fr a_pic_to_eat_heroku-*.dist-info
+	@rm -fr a_pic_to_eat_heroku.egg-info
 
 install:
 	@pip install . -U
