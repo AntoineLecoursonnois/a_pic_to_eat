@@ -17,8 +17,11 @@ The process imagined and deployed on heroku is as follows :
 - The IA will:
 
 Crop it in patches.
+
 Detect all the fruits and vegetables present.
+
 Live scrap Marmiton.org (a famous french cooking recipes website) in order to find all the recipes that contains the detected products.
+
 Suggest you a top 3 of the best recipes regarding the reviews.
 
 - You now have the keys to act against food waste, bon appétit.
